@@ -179,7 +179,7 @@ Table of Contents
 
 ### See it in Action
 
--  https://explorer.exor.io/
+-  https://explorer.absify.me/
 
 ### Installation
 
@@ -226,7 +226,7 @@ db.createUser( { user: "aiquidus", pwd: "Nd^p2d77ceBX!L", roles: [ "readWrite" ]
 ##### Download Source Code
 
 ```
-git clone https://github.com/team-exor/eiquidus explorer
+git clone https://github.com/absolute-community/Aiquidus-Explorer.git
 ```
 
 ##### Install Node Modules
@@ -725,7 +725,7 @@ Where [SIZE] is an integer higher than the default.
 - **[Alan Rudolf (aka suprnurd)](https://github.com/suprnurd):** for the custom changes found in the [Ciquidus explorer](https://github.com/suprnurd/ciquidus)
 - **[Tim Garrity (aka uaktags)](https://github.com/uaktags):** for his many contributions to the Iquidus explorer and custom features from the [uaktags explorer](https://github.com/uaktags/explorer)
 - **[TheHolyRoger](https://github.com/TheHolyRoger):** for his continued work and contributions to the Iquidus explorer
-- **[joeuhren] (https://github.com/joeuhren) ** for his continued work and contributions to the Iquidus explorer
+- **[joeuhren](https://github.com/joeuhren) ** for his continued work and contributions to the Iquidus explorer
 - All the rest of the Iquidus contributors who helped shape the Iquidus explorer in some way
 
 
@@ -733,7 +733,7 @@ Where [SIZE] is an integer higher than the default.
 ### License
 
 
-
+Copyright (c) 2019-2021, Absolute (ABS) Development Ltd<br />
 Copyright (c) 2019-2021, The Exor Community<br />
 Copyright (c) 2017, The Chaincoin Community<br />
 Copyright (c) 2015, Iquidus Technology<br />
