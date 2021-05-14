@@ -4,16 +4,16 @@ forcesync() {
   blockcount=$1
   echo "╒══════════════════<<"
   echo "| height : $blockcount"
-  blockhash=`curl -s https://explorer.exor.io/api/getblockhash?height=$blockcount`
+  blockhash=`curl -s https://explorer.absify.me/api/getblockhash?height=$blockcount`
   echo "| ଓ hash : $blockhash"
-  curl -s https://explorer.exor.io/block/$blockhash > /dev/null
+  curl -s https://explorer.absify.me/block/$blockhash > /dev/null
   echo "╘═══════════════════════════════>>"
 }
 
 main() {
   echo "Checking for new block..."
   previousblockcount=$currentblockcount
-  currentblockcount=`curl -s https://explorer.exor.io/api/getblockcount`
+  currentblockcount=`curl -s https://explorer.absify.me/api/getblockcount`
   if [ $currentblockcount -ne $previousblockcount ]; then
     echo "New block found. Syncing..."
     forcesync $currentblockcount
