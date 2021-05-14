@@ -698,7 +698,7 @@ app.set('api_cmds', settings.api_cmds);
 app.set('blockchain_specific', settings.blockchain_specific);
 
 // determine panel offset based on which panels are enabled
-var paneltotal = 5;
+var paneltotal = 7;
 var panelcount = (settings.shared_pages.page_header.panels.network_panel.enabled == true && settings.shared_pages.page_header.panels.network_panel.display_order > 0 ? 1 : 0) +
   (settings.shared_pages.page_header.panels.difficulty_panel.enabled == true && settings.shared_pages.page_header.panels.difficulty_panel.display_order > 0 ? 1 : 0) +
   (settings.shared_pages.page_header.panels.masternodes_panel.enabled == true && settings.shared_pages.page_header.panels.masternodes_panel.display_order > 0 ? 1 : 0) +
@@ -721,7 +721,7 @@ if (settings.shared_pages.page_header.panels.logo_panel.enabled == true && setti
 
 panel_order.sort(function(a,b) { return a.val - b.val; });
 
-for (var i = 1; i < 6; i++)
+for (var i=1; i<8; i++)
   app.set('panel'+i.toString(), ((panel_order.length >= i) ? panel_order[i-1].name : ''));
 
 app.set('market_data', market_data);

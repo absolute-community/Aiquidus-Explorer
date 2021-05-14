@@ -8,7 +8,7 @@ if [ -f "${SCRIPT_PATH}/del.tmp" ]; then
   rm -f "${SCRIPT_PATH}/del.tmp"
 fi
 # Prompt for deleting database
-echo "You are about to delete the entire eIquidus database."
+echo "You are about to delete the entire AIquidus database."
 echo "Are you sure you want to do this? [y/n]: ";
 read -p "" DELETE_ANSWER
 # Determine if the database should be deleted

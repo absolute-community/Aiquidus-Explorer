@@ -365,6 +365,8 @@ html(lang='en')
           hideShowPanel('#{settings.panel3}', 'pnlThree');
           hideShowPanel('#{settings.panel4}', 'pnlFour');
           hideShowPanel('#{settings.panel5}', 'pnlFive');
+          hideShowPanel('#{settings.panel6}', 'pnlSix');
+          hideShowPanel('#{settings.panel7}', 'pnlSeven');
         }
         setInterval(function() {
           update_stats();
@@ -482,7 +484,7 @@ html(lang='en')
                   button.btn.btn-success.btn-sm(type='submit') #{settings.locale.ex_search_button}
     div#body-container(style='margin-top:' + (settings.shared_pages.page_header.sticky_header == true ? '80px;' : '20px;'))
       if showSync != null && showSync == true
-        .col-lg-12
+        .col-lg-14
           .alert.alert-warning
             .cardSpacer
               span.fas.fa-exclamation-triangle(style='margin-right:5px;')
@@ -492,26 +494,34 @@ html(lang='en')
         .col-lg-12
           if showPanels == true
             .row.text-center.d-flex.justify-content-center
-              div(class="col-lg-2 col-lg-offset-" + settings.paneloffset)
+              div(class="col-sm col-lg-offset-" + settings.paneloffset)
                 - if (settings.panel1 != '') {
                   .card.card-default.border-0.d-none.d-lg-block.d-block.cardSpacer(id='pnlOne')
                 - }
               - if (settings.panel2 != '') {
-                .col-lg-2
+                .col-sm
                   .card.card-default.border-0.d-none.d-lg-block.d-block.cardSpacer(id='pnlTwo')
               - }
               - if (settings.panel3 != '') {
-                .col-lg-2
+                .col-sm
                   .card.card-default.border-0.d-none.d-lg-block.d-block.cardSpacer(id='pnlThree')
               - }
               - if (settings.panel4 != '') {
-                .col-lg-2
+                .col-sm
                   .card.card-default.border-0.d-none.d-lg-block.d-block.cardSpacer(id='pnlFour')
               - }
               - if (settings.panel5 != '') {
-              .col-lg-2
+              .col-sm
                 .card.card-default.border-0.d-none.d-lg-block.d-block.cardSpacer(id='pnlFive')
               - }
+          - if(settings.panel6 != '') {
+          .col-sm
+            .card.card-default.border-0.d-none.d-lg-block.d-block.cardSpacer(id='pnlSix')
+          - }
+          - if(settings.panel7 != '') {
+          .col-sm
+            .card.card-default.border-0.d-none.d-lg-block.d-block.cardSpacer(id='pnlSeven')
+          - }
           if settings.shared_pages.page_header.search.enabled == true && settings.shared_pages.page_header.search.position.toString().toLowerCase() == 'below-header'
             div#search-row.row.text-center
               form.form-inline.col-12.d-flex.justify-content-center(method='post', action='/search')

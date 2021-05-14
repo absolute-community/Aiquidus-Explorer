@@ -3,7 +3,7 @@
 @use './themes/Cosmo/variables' as Cosmo;
 @use './themes/Cyborg/variables' as Cyborg;
 @use './themes/Darkly/variables' as Darkly;
-@use './themes/Exor/variables' as Exor;
+@use './themes/Absolute/variables' as Absolute;
 @use './themes/Flatly/variables' as Flatly;
 @use './themes/Journal/variables' as Journal;
 @use './themes/Litera/variables' as Litera;
@@ -31,8 +31,8 @@
     border-color: Cyborg.$table-border-color;
   } @else if theme-selector.$theme-name == "Darkly" {
     border-color: Darkly.$table-border-color;
-  } @else if theme-selector.$theme-name == "Exor" {
-    border-color: Exor.$table-border-color;
+  } @else if theme-selector.$theme-name == "Absolute" {
+    border-color: Absolute.$table-border-color;
   } @else if theme-selector.$theme-name == "Flatly" {
     border-color: Flatly.$gray-300;
   } @else if theme-selector.$theme-name == "Journal" {
@@ -81,8 +81,8 @@
     border-color: #757575;  /* Hardcoded value not present in _variables.scss */
   } @else if theme-selector.$theme-name == "Darkly" {
     border-color: #434343;  /* Hardcoded value not present in _variables.scss */
-  } @else if theme-selector.$theme-name == "Exor" {
-    border-color: Exor.$table-border-color;
+  } @else if theme-selector.$theme-name == "Absolute" {
+    border-color: Absolute.$table-border-color;
   } @else if theme-selector.$theme-name == "Flatly" {
     border-color: #454d55;  /* Hardcoded value not present in _variables.scss */
   } @else if theme-selector.$theme-name == "Journal" {
@@ -131,8 +131,8 @@
     border-color: Cyborg.$gray-700;
   } @else if theme-selector.$theme-name == "Darkly" {
     border-color: Darkly.$gray-700;
-  } @else if theme-selector.$theme-name == "Exor" {
-    border-color: Exor.$gray-700;
+  } @else if theme-selector.$theme-name == "Absolute" {
+    border-color: Absolute.$gray-700;
   } @else if theme-selector.$theme-name == "Flatly" {
     border-color: Flatly.$gray-300;
   } @else if theme-selector.$theme-name == "Journal" {
@@ -185,9 +185,9 @@
   } @else if theme-selector.$theme-name == "Darkly" {
     color: Darkly.$white;
     background-color: Darkly.$gray-800;
-  } @else if theme-selector.$theme-name == "Exor" {
-    color: Exor.$white;
-    background-color: Exor.$gray-800;
+  } @else if theme-selector.$theme-name == "Absolute" {
+    color: Absolute.$white;
+    background-color: Absolute.$gray-800;
   } @else if theme-selector.$theme-name == "Flatly" {
     color: Flatly.$white;
     background-color: Flatly.$gray-800;
@@ -260,9 +260,9 @@
   } @else if theme-selector.$theme-name == "Darkly" {
     color: Darkly.$gray-700;
     background-color: Darkly.$gray-200;
-  } @else if theme-selector.$theme-name == "Exor" {
-    color: Exor.$gray-700;
-    background-color: Exor.$gray-200;
+  } @else if theme-selector.$theme-name == "Absolute" {
+    color: Absolute.$gray-700;
+    background-color: Absolute.$gray-200;
   } @else if theme-selector.$theme-name == "Flatly" {
     color: Flatly.$gray-700;
     background-color: Flatly.$gray-200;
@@ -331,7 +331,7 @@
     color: rgba(0, 0, 0, 0.5);
   } @else if theme-selector.$theme-name == "Darkly" {
     color: rgba(34, 34, 34, 0.7);
-  } @else if theme-selector.$theme-name == "Exor" {
+  } @else if theme-selector.$theme-name == "Absolute" {
     color: rgba(34, 34, 34, 0.7);
   } @else if theme-selector.$theme-name == "Flatly" {
     color: rgba(0, 0, 0, 0.5);
@@ -381,7 +381,7 @@
     color: rgba(255, 255, 255, 0.5);
   } @else if theme-selector.$theme-name == "Darkly" {
     color: rgba(255, 255, 255, 0.6);
-  } @else if theme-selector.$theme-name == "Exor" {
+  } @else if theme-selector.$theme-name == "Absolute" {
     color: Exor.$black;
   } @else if theme-selector.$theme-name == "Flatly" {
     color: Flatly.$white;

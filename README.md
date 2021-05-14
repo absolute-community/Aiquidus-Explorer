@@ -1,27 +1,8 @@
-# eIquidus
+# AIquidus
 
 ### v1.99.0
 
-Written in node.js and mongodb, eIquidus is the most stable, secure, customizable and feature-rich open-source block explorer with support for virtually any altcoin that implements some form of the [Bitcoin RPC API protocol](https://developer.bitcoin.org/reference/rpc/index.html). Originally built for the [Exor blockchain](https://github.com/team-exor/exor), eIquidus has since grown into a fully-featured explorer with a focus on stability and security at its core. All features from the [original iquidus explorer](https://github.com/iquidus/explorer) are included here along with many new ideas from other iquidus forks, and an absolute ton of new custom changes and bug fixes that were developed specifically for eIquidus.
-
-![Homepage](public/img/screenshots/homepage.png)
-
-#### Special Thanks
-- **[Luke Williams (aka iquidus)](https://github.com/iquidus):** for creating the original [Iquidus explorer](https://github.com/iquidus/explorer)
-- **[Alan Rudolf (aka suprnurd)](https://github.com/suprnurd):** for the custom changes found in the [Ciquidus explorer](https://github.com/suprnurd/ciquidus)
-- **[Tim Garrity (aka uaktags)](https://github.com/uaktags):** for his many contributions to the Iquidus explorer and custom features from the [uaktags explorer](https://github.com/uaktags/explorer)
-- **[TheHolyRoger](https://github.com/TheHolyRoger):** for his continued work and contributions to the Iquidus explorer
-- All the rest of the Iquidus contributors who helped shape the Iquidus explorer in some way
-
-<h3 class="rich-diff-level-zero" align="center" name="eiquidus-open-bounty-program">:moneybag: eIquidus Open Bounty Program :moneybag:</h3>
-<h3 class="rich-diff-level-zero" align="center">:moneybag: DEVELOPERS WANTED: We pay EXOR coins for quality pull requests :moneybag:</h3>
-
-Before getting too excited, please note that for now, the average payment will likely be equivalent to the price of a cup of coffee, depending on the complexity and usefulness of the pull request. The open bounty means that we welcome any and all code submissions that improve the overall experience of the explorer in some way. We are generally more interested in bug fixes and feature enhancements that are useful for most users, and are less interested in coin-specific changes that only benefit a small handful of users, although we do appreciate and support those types of updates as well. Payments will be decided on a case by case basis. If you are interested in submitting a pull request for payment, you may [create a new issue](https://github.com/team-exor/eiquidus/issues) for bugs, [start a new discussion](https://github.com/team-exor/eiquidus/discussions) for general updates, or contact the developer privately via Discord or Telegram using the links below to get an approximate quote on how much a particular fix or feature may be worth.
-
-<div align="center">
-<a href="https://discord.gg/dSuGm3y"><img src="https://img.shields.io/badge/Discord-Joe%20%5BTeam%20Exor%5D%235573-blue?style=for-the-badge&logo=Discord" /></a>&nbsp;
-<a href="https://t.me/joeuhren"><img src="https://img.shields.io/badge/Telegram-joeuhren-blue?style=for-the-badge&logo=Telegram" /></a>
-</div>
+Written in node.js and mongodb, aIquidus is one of the most stable, secure, customizable and feature-rich open-source block explorer with support for virtually any altcoin that implements some form of the [Bitcoin RPC API protocol](https://developer.bitcoin.org/reference/rpc/index.html) AIquidus has since grown into a fully-featured explorer with a focus on stability and security at its core. All features from the [original iquidus explorer](https://github.com/iquidus/explorer) are included here along with many new ideas from other iquidus forks, and an absolute ton of new custom changes and bug fixes that were developed specifically for Iquidus variations.
 
 Table of Contents
 ------------------
@@ -36,14 +17,8 @@ Table of Contents
     - [Download Source Code](#download-source-code)
     - [Install Node Modules](#install-node-modules)
     - [Configure Explorer Settings](#configure-explorer-settings)
-- [Start/Stop the Explorer](#startstop-the-explorer)
-  - [Start Explorer (Use for Testing)](#start-explorer-use-for-testing)
-  - [Stop Explorer (Use for Testing)](#stop-explorer-use-for-testing)
-  - [Start Explorer Using PM2 (Recommended for Production)](#start-explorer-using-pm2-recommended-for-production)
-  - [Start Explorer Using PM2 and Log Viewer](#start-explorer-using-pm2-and-log-viewer)
-  - [Stop Explorer Using PM2 (Recommended for Production)](#stop-explorer-using-pm2-recommended-for-production)
-  - [Start Explorer Using Forever (Alternate Production Option)](#start-explorer-using-forever-alternate-production-option)
-  - [Stop Explorer Using Forever (Alternate Production Option)](#stop-explorer-using-forever-alternate-production-option)
+    - [Starting the Explorer](#starting-the-explorer)
+    - [Stopping the Explorer](#stopping-the-explorer)
 - [Syncing Databases with the Blockchain](#syncing-databases-with-the-blockchain)
   - [Sample Crontab](#sample-crontab)
 - [Wallet Settings](#wallet-settings)
@@ -125,7 +100,7 @@ Table of Contents
   - **Transaction Info:** Displays transaction summary, list of input addresses and output addresses for a specific transaction
   - **Address Info:** Displays wallet address summary (balance, total sent, total received, QR code) and a list of latest transactions for a specific wallet address
 - Choose from 22 built-in themes with tweakable settings such as light and dark options to customize the look and feel of the explorer:
-  - **Exor** *\*default theme made especially for eIquidus*
+
   - **Cerulean** ([Preview](https://bootswatch.com/cerulean/))
   - **Cosmo** ([Preview](https://bootswatch.com/cosmo/))
   - **Cyborg** ([Preview](https://bootswatch.com/cyborg/))
@@ -245,7 +220,7 @@ use explorerdb
 Create a new user with read/write access:
 
 ```
-db.createUser( { user: "eiquidus", pwd: "Nd^p2d77ceBX!L", roles: [ "readWrite" ] } )
+db.createUser( { user: "aiquidus", pwd: "Nd^p2d77ceBX!L", roles: [ "readWrite" ] } )
 ```
 
 ##### Download Source Code
@@ -430,15 +405,15 @@ Notes:
 *Example crontab; update index every minute, market data every 2 minutes, peers and masternodes every 5 minutes*
 
 ```
-*/1 * * * * /path/to/explorer/scripts/sync.sh /path/to/node update > /dev/null 2>&1
-*/2 * * * * /path/to/explorer/scripts/sync.sh /path/to/node market > /dev/null 2>&1
-*/5 * * * * /path/to/explorer/scripts/sync.sh /path/to/node peers > /dev/null 2>&1
-*/5 * * * * /path/to/explorer/scripts/sync.sh /path/to/node masternodes > /dev/null 2>&1
+*/1 * * * * /root/explorer/scripts/sync.sh /usr/bin/nodejs update > /dev/null 2>&1
+*/2 * * * * /root/explorer/scripts/sync.sh /usr/bin/nodejs market > /dev/null 2>&1
+*/5 * * * * /root/explorer/scripts/sync.sh /usr/bin/nodejs peers > /dev/null 2>&1
+*/5 * * * * /root/explorer/scripts/sync.sh /usr/bin/nodejs masternodes > /dev/null 2>&1
 ```
 
 ### Wallet Settings
 
-The wallet connected to eIquidus must be running with the following flags:
+The wallet connected to AIquidus must be running with the following flags:
 
 ```
 -daemon -txindex
@@ -745,19 +720,19 @@ Where [SIZE] is an integer higher than the default.
 
 *note: SIZE will depend on which blockchain you are using, you may need to play around a bit to find an optimal setting*
 
-### How You Can Support Us
+#### Special Thanks
+- **[Luke Williams (aka iquidus)](https://github.com/iquidus):** for creating the original [Iquidus explorer](https://github.com/iquidus/explorer)
+- **[Alan Rudolf (aka suprnurd)](https://github.com/suprnurd):** for the custom changes found in the [Ciquidus explorer](https://github.com/suprnurd/ciquidus)
+- **[Tim Garrity (aka uaktags)](https://github.com/uaktags):** for his many contributions to the Iquidus explorer and custom features from the [uaktags explorer](https://github.com/uaktags/explorer)
+- **[TheHolyRoger](https://github.com/TheHolyRoger):** for his continued work and contributions to the Iquidus explorer
+- **[joeuhren] (https://github.com/joeuhren) ** for his continued work and contributions to the Iquidus explorer
+- All the rest of the Iquidus contributors who helped shape the Iquidus explorer in some way
 
-The eIquidus block explorer is brought to you by the tireless efforts of the [Exor development team](https://exor.io/#section-team) for the benefit of the greater crypto community. If you enjoy our work, please consider supporting our continued development of this and many other cool crypto projects which you can find on our [github page](https://github.com/team-exor).
 
-You can support us via one of the following options:
-
-1. [Buy and hodl EXOR](https://app.stex.com/en/trade/pair/BTC/EXOR/1D). Buying and trading our EXOR coin helps stimulate the market price which allows us to hire more developers and continue to release high quality products in the future.
-2. Consider a small donation by sending us some cryptocurrency:
-    - **BTC:** [15zQAQFB9KR35nPWEJEKvmytUF6fg2zvdP](https://www.blockchain.com/btc/address/15zQAQFB9KR35nPWEJEKvmytUF6fg2zvdP)
-    - **EXOR:** [EYYW8Nvz5aJz33M3JNHXG2FEHWUsntozrd](https://explorer.exor.io/address/EYYW8Nvz5aJz33M3JNHXG2FEHWUsntozrd)
-3. Are you a software developer? Consider taking advantage of our [open bounty program](#eiquidus-open-bounty-program) and get paid in EXOR to help make the block explorer even better by submitting code improvements.
 
 ### License
+
+
 
 Copyright (c) 2019-2021, The Exor Community<br />
 Copyright (c) 2017, The Chaincoin Community<br />
