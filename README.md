@@ -4,6 +4,8 @@
 
 Written in node.js and mongodb, aIquidus is one of the most stable, secure, customizable and feature-rich open-source block explorer with support for virtually any altcoin that implements some form of the [Bitcoin RPC API protocol](https://developer.bitcoin.org/reference/rpc/index.html) AIquidus has since grown into a fully-featured explorer with a focus on stability and security at its core. All features from the [original iquidus explorer](https://github.com/iquidus/explorer) are included here along with many new ideas from other iquidus forks, and an absolute ton of new custom changes and bug fixes that were developed specifically for Iquidus variations.
 
+Many Thanks to **[joeuhren](https://github.com/joeuhren)** for his continued work and contributions on developing Iquidus Explorer
+
 Table of Contents
 ------------------
 
@@ -725,7 +727,7 @@ Where [SIZE] is an integer higher than the default.
 - **[Alan Rudolf (aka suprnurd)](https://github.com/suprnurd):** for the custom changes found in the [Ciquidus explorer](https://github.com/suprnurd/ciquidus)
 - **[Tim Garrity (aka uaktags)](https://github.com/uaktags):** for his many contributions to the Iquidus explorer and custom features from the [uaktags explorer](https://github.com/uaktags/explorer)
 - **[TheHolyRoger](https://github.com/TheHolyRoger):** for his continued work and contributions to the Iquidus explorer
-- **[joeuhren](https://github.com/joeuhren) ** for his continued work and contributions to the Iquidus explorer
+- **[joeuhren](https://github.com/joeuhren)** for his continued work and contributions to the Iquidus explorer
 - All the rest of the Iquidus contributors who helped shape the Iquidus explorer in some way
 
 
